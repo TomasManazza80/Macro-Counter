@@ -1,0 +1,6 @@
+.pic{
+    background-image: url('../media/bg.jpg');
+    background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
+    background-position: center; /* Centra la imagen */
+    height: 100vh; /* Ajusta la altura del contenedor */
+}
