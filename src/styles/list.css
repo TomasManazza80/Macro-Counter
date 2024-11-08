@@ -1,0 +1,17 @@
+.p-10.mx-auto.max-w-4xl {
+    background-color: black;
+    size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+
+
+
+
+  .cards {
+    width: 200px;
+    height: 200px;
+    background-color: #f8f6f6;
+    box-shadow: inset 0px 0px 10px rgba(255, 255, 255, 0.8);
+  }

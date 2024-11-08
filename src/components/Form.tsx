@@ -53,7 +53,7 @@ export default function Form({dispatch, state} : FormProps) {
 
   return (
     <form 
-      className="space-y-5  bg-black  shadow p-10 text-white rounded-lg"
+      className="space-y-5  bg-black  shadow p-10 text-white rounded-lg bg-black/50 rounded-full"
       onSubmit={handleSubmit}
     >
       <div className="grid grid-cols-1 gap-3">

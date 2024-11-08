@@ -4,6 +4,8 @@ import { activityReducer, initialState } from './reducers/activity-reducer'
 import ActivityList from './components/ActivityList'
 import CalorieTracker from './components/CalorieTracker'
 import './styles/pic.css'
+import './styles/list.css'
+
 function App() {
 
     const [state, dispatch] = useReducer(activityReducer, initialState)
@@ -19,7 +21,7 @@ function App() {
 
 
         
-            <header className="bg-black/50 py-3">
+            <header className="bg-black py-3">
                 <div className="max-w-4xl mx-auto flex justify-between items-center">
                     <h1 className="text-rigth pr-[100px] text-lg font-bold text-white uppercase">
                         macro counter 
@@ -53,7 +55,7 @@ function App() {
                 </div>
             </section>
 
-            <section className="p-10 mx-auto max-w-4xl">
+            <section className="bg-black ">
                 <ActivityList 
                     activities={state.activities}
                     dispatch={dispatch}

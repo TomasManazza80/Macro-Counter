@@ -3,6 +3,8 @@ import { Activity } from "../types"
 import { categories } from "../data/categories"
 import { PencilSquareIcon, XCircleIcon } from '@heroicons/react/24/outline'
 import { ActivityActions } from "../reducers/activity-reducer"
+import '../styles/list.css'
+
 
 type ActivityListProps = {
     activities: Activity[],
@@ -19,17 +21,21 @@ export default function ActivityList({activities, dispatch} : ActivityListProps)
 
     return (
         <>
-            <h2 className="text-4xl font-bold text-slate-600 text-center">
+        <div  className="flex flex-col items-center">
+            <h2 className="text-4xl font-bold text-slate-600 text-center mb-5">
                 Comida y Actividades
             </h2>
         
             {isEmptyActivities ? 
-                <p className="text-center my-5">No hay actividades aún...</p> : 
+                <p className="text-center my-5 ">No hay actividades aún...</p> : 
                 activities.map( activity => (
-                    <div key={activity.id} className="px-5 py-10 bg-white mt-5 flex justify-between shadow">
+                    <div className="bg-white rounded-full  w-2/3 mb-5 h-25">
+
+
+                    <div key={activity.id} className="px-20 py-10 mt-5 flex justify-between shadow">
                         <div className="space-y-2 relative"> 
                             <p className={`absolute -top-8 -left-8 px-10 py-2 text-white uppercase font-bold 
-                            ${activity.category === 1 ? 'bg-yellow-500' : 'bg-blue-800'}`}>
+                            ${activity.category === 1 ? 'bg-yellow-500 rounded-full' : 'bg-blue-800 rounded-full'}`}>
                                 {categoryName(+activity.category)}
                             </p>
                             <p className="text-2xl font-bold pt-5">{activity.name}</p>
@@ -57,7 +63,15 @@ export default function ActivityList({activities, dispatch} : ActivityListProps)
                             </button>
                         </div>
                     </div>
+
+
+
+                    </div>
+
+
+
                 ))}
+            </div>
         </>
     )
 }
